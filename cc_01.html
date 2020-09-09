@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jon's IDM Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+        
+
+        
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+                
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+						
+						<a href="index.html#creativecoding"> back</a>
+							
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Creative Coding Week 1</h1>
+
+								<p></p>
+
+								During my first class in graduate school at NYU in the Integrated Digital Media program, I learned about p5js and how to use it for the first time. During the lecture and exploring the resources, I learned about 3D objects and how I had to use WebGL to use that feature; it was pretty cool and at the same time I also learned about animation in p5js. Below is what I played around with and ended up with by the end of class:
+								
+								<span class="image main"><img src="images/cc_ss01.png" alt="" /></span>
+								
+								For the first homework assignment, I decided to go with the selfie. I figured that a good starting point would be to sketch a selfie and figure out basic shapes to create the drawing. I then decided that it would make more sense to just take a real selfie to base the sketch off of. Leveraging what I know I decided to just make a simple version of myself by running some photoshop filters. 
+								
+								<span class="image main"><img src="images/cc_ss02.png" alt="" /></span>
+								
+								I later figured out that I could import an image into p5js after some research and use it to trace over. I found out that the coordinate system in WebGL starts in the middle which means a negative value is needed, which then meant that I couldn't use the mouse over function I learned in class. Thankfully I found out about the translate function which let me shift things to make that work (-width/2, -height/2) to get things going with less guesswork.
+								
+								<p></p>
+
+								
+								//get curve vertex locations
+								<br />
+								function mousePressed() {
+									<br />
+								  console.log('curveVertex(' + mouseX + ',' + mouseY + ');');
+								
+
+								<p></p>
+
+								Things got a little pickley with so much translating so I also learned about the push and pop functions in the reference library which is a workflow I think works pretty nicely. I started with simple shapes but it got tedious with not so super outcomes, so I figured that I should try to do it like how I would in photoshop with curves and vertex points, luckily there was the begin shape function. It worked pretty good at first, I tried just drawing my shirt but for some reason, the vertex function didn't work very well whenever I made shapes that included anything that went positive x and then positive y like a backward L, some sort of cross over would happen. Luckily I found out about curveVertex which gave me more control. Even so, the process was super tedious so I came up with an awesome idea to turn the console mouse position to write the code for me. 
+								
+
+								<span class="image main"><img src="images/cc_ss03.png" alt="" /></span>
+								https://www.quora.com/How-can-you-find-the-coordinates-in-a-hexagon
+								
+								<p></p>
+								
+								After I figured that out, the rest was cake... more like layering cake that is! All I had to do then was click around and trace my simplified photoshop selfie. I found out that for simple or small shapes, the regular vertex points function worked better. I decided that I wanted to decorate my drawing with some 3D shapes to get used to the coordinates but also since I went through all the trouble of using WebGL. I created a shape near the origin to rotate in the Y that I used to help visualize the pivot which I later on turned invisible. I threw in a bunch of other shapes rotating around my head, at first I had 4 but that wasn't enough and then I had 8 but that got too cluttered so I went with 6 and figured out the coordinates with some simple math from google.
+								
+								<p></p>
+
+								<a href="https://github.com/phanman71/jons_github/blob/week01/Jon_01_selfie/sketch.js">week_01 code in github</a>
+
+								<p></p>
+
+								<a href="https://editor.p5js.org/phanman/sketches/Hdo3V8C0X">week_01 code in p5 js</a>
+					
+								<p></p>
+								
+								<iframe style="width: 1000px; height: 1000px; overflow: hidden;" scrolling="no" frameborder="0" src="https://editor.p5js.org/phanman/embed/bmr3uVzmw"> </iframe>
+								
+								<p></p>
+
+								The last part of the puzzle was to figure out how to use post up my work on a blog, I went with GitHub so I had to learn the interface and all that, what a repository is, how to make a website using it, how to embed my code, throw in pictures, etc... which took a lot more time than I thought but here it is!
+								
+								<p></p>
+								
+								<h2>Delusions of Dialogue: Control and Choice in Interactive Art by Jim Campbell - response</h2>
+								
+								I thought this article was pretty interesting, the part that stuck out to me the most was when he was describing art made by programs started to look the same as the “Photoshop Effect”.  From my experience as a 3D artist, we sort of have this problem a lot. Most people don’t think too much about this, but when you make assets in 3D, it always comes out very clean and it looks very “CGI” as most people would put it. And as Campbell said, the computer only follows direct functions and doesn’t know how to make something look truly real, unless we’re talking machine learning, but that’s a whole other topic.  
+								
+								<p></p>
+
+								There is a lot of work put in to make things look dirty, flawed, or damaged on purpose to make it look more realistic. A good example would be starting with a programmed procedural material with realistic physical attributes. By default, this will make anyone else who uses this material have the same looking thing, even if there are some sliders to edit it. This issue comes in when an artist uses a template and doesn’t iterate enough. Too random and it’s not realistic, not random enough and it looks fake. 
+								
+								<p></p>
+
+								If you have a skilled enough artist, they should be able to see the things the computer made that makes it look computer-generated and hide all the cliques and keep the illusion. It’s the professional’s eyes versus everyone else. Fun fact, the gold material they designed for “the one ring” from Lord of the Rings was also used as a starting point for Iron Man’s gold titanium alloy. 
+								
+								<p></p>
+
+								The idea that using computers to make art and things looking the same can be true but I like to think of it on the other spectrum that when they hit that point that their work looks like everyone else's' because the technology lets them jump there, they can go even further beyond with visuals they wouldn’t have been able to accomplish without the software. 
+								
+								</p>
+
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">home</a></li>
+							</ul>
+						</nav>
+					</header>
+
+
+
+		<!-- Main -->
+					<div id="main">
+                    while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                     i++;
+                    }
+                    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</article>
+                    </div>
+                    
+		<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+                      </div>
+            
+
+        <!-- BG -->
+            <div id="bg"></div>
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
