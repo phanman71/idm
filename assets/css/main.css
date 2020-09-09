@@ -1321,7 +1321,7 @@ input, select, textarea {
 				transition-delay: 0.25s;
 				padding: 3rem 2rem;
 				max-height: 40rem;
-				overflow: hidden;
+				overflow: auto;
 			}
 
 				#header .content .inner > :last-child {
@@ -1531,6 +1531,7 @@ input, select, textarea {
 		position: relative;
 		max-width: 100%;
 		z-index: 3;
+		
 	}
 
 		#main article {
