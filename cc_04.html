@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jon's IDM Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+        
+
+        
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<header id="header">
+						<div class="content">
+							<div class="content">
+							<div class="inner">
+								<h1>Creative Coding Week 4</h1>
+
+								<p></p>
+								For this week in creative coding, I decided to try and make my first game in p5js! The assignment was to create some sort of collision or something so I thought it would be fun to make one of the first popular arcade games, space invaders. Shooter games were always one of my favorite types of classic arcade games, more so than say Pac-Man.  
+								<p></p>
+								<a href="https://editor.p5js.org/phanman/sketches/vm1C1b5FK" target="_blank">check out the code here!</a>
+									
+								<p></p>
+								<iframe style="width: 500px; height: 500px; overflow: hidden;" scrolling="no" frameborder="0" src="https://editor.p5js.org/phanman/embed/vm1C1b5FK"> </iframe>
+								<p></p>
+		
+									After writing a bunch of pseudo-code for notes and adding more as I went along, I went for it. The first thing I did was make a ship which is the awesome little triangle that I put at the bottom of the screen.  Next, I had to add some control to it so I set it up so that if you press on the right arrow key or D you would go right, and A or left arrow to go left. I also set it up so that it wouldn't work if you were out of bounds and also set the speed based on how much was added or subtracted to the x position.  I wanted to do A & D since it would feel more comfortable with a mouse for whoever was comfortable with the 
+									WASD controls for pc gaming but also the arrow keys for anyone who didn't and would intuitively go for those controls. During this time I also learned that each keystroke had a specific numerical value. 
+									<p></p>
+		
+										Next, I created the bullets that spawned whenever you clicked your mouse. For that, I had to return the x and y position of the ship so that it would spawn slightly above wherever the ship was. 
+										Then I created the enemies, I was originally going to just have the bad guys move left and right on the top of the screen but then I decided to just have them bounce around since that would be more interactive but also easier heh. These guys had to return their x and y positions as well, guess a lot of location data is needed for games like this.  
+										<p></p>
+		
+										Now for the most difficult thing that kept me up until 3 in the morning was figuring out how to bring it all together and have my objects speak with each other. After a lot of trial and error, I found an example that made it all make a lot more sense. Using a collided function that checks the difference in the y and x values from the returned values with a get thing and sees if it's within the threshold, it gave a boolean that I could use to make it do stuff. I'm still sorta digesting all these algorithms but so far so good. So when it seems that a bullet touches an enemy a deleted index is used to remove the enemy. 
+										Then I added in the big text that says you died (dark souls style) if an enemy touches you. I didn't quite figure out a way to easily just freeze frame everything and make you start over but I think it works for now. And lastly, some text that says you win if you can bring the enemy index to less than 1. 
+										<p></p>
+										For the future, I think I would add in some nice sprites, make the hitbox on the player tighter, add a little explosion for blowing up stuff, a score thingy, maybe some power-ups, and maybe even go 3D. 
+										<p></p>
+		
+
+								<a href="index.html"> <h2>home</h2> </a>
+
+								<p>
+									
+									<p>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								
+							</ul>
+						</nav>
+					</header>
+
+
+
+		<!-- Main -->
+					<div id="main">
+                    while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                     i++;
+                    }
+                    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</article>
+                    </div>
+                    
+		<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+                      </div>
+            
+
+        <!-- BG -->
+            <div id="bg"></div>
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
