@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jon's IDM Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+        
+
+        
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<header id="header">
+						<div class="content">
+							<div class="content">
+							<div class="inner">
+								<h1>Creative Coding Week 5</h1>
+								<center>
+								<p></p>
+								For this week in creative coding, I learned about APIs and how to use them. 
+								<p></p>
+								Looking through the list of free API's I decided to go with the game list from Giant Bomb since I like video games alot. This one was a little tricky to use,
+								first to gain access to it, I had to make an account and get an access key. To get it working I also had to setup a COR. This part was pretty tricky because
+								after a while I found out I had to set it up as a proxy. 
+								<p></p>
+								The Giant Bomb API uses a 5 digit code for each of it's games so I decided to set up a random game generator. Going through the options for available keywords,
+								I found "images" was a nice to grab an image of the game. So after that I setup a function where when you click, you'll get a new game image along with it's name
+								and ID. Sometimes you'll get a number that is not registered to a game resulting in nothing happening. I did try to fix this but haven't quite figured it out yet.
+								So whenever you do get a new image, it goes next to a previous one or below creating a scroll bar, I'm not completely sure how this works out or how to scale the 
+								images but I think I'm pretty happy with the outcome. With so many video games out there, I'm suprised that I know some of the ones I've had pop up. 
+								<p></p>
+								(scroll down below for my midterm proposal and reflections)
+								<p></p>
+
+								<a href="https://editor.p5js.org/phanman/sketches/bN2IEcglb" target="_blank">check out the code here!</a>
+									
+								<p></p>
+
+								<iframe style="width: 1000px; height: 1000px; overflow: hidden;"  frameborder="0" src="https://editor.p5js.org/phanman/embed/bN2IEcglb"> </iframe>
+								<p></p>
+		
+								
+								<h2>Mid Term Proposal</h2>
+
+								For my mid term proposal, I think I want to try expanding on a shooter game. First, because I really like games, two, because shooting things are fun, and three, I 
+								kind of have the basic framework down to build something on top of. My main attempt is a 3D shooter with a space ship going through space with a 3rd person view, if 
+								it's a little too crazy then my backup plan has pretty much the same mechanics but is more of a 2d top down arcade shooter upgraded with cool new features like 
+								enimes moving in interesting formations. 
+								<p></p>
+								
+								<span class="image main"><img src="images/cc_2d.jpg" style="max-width: 500px; max-height: 500px;"alt="" /></span>
+								<span class="image main"><img src="images/cc_3d.jpg" style="max-width: 500px; max-height: 500px;"alt="" /></span>
+							
+
+
+								/*
+
+setup web gl<br>
+draw player ship<br>
+place ship in -Z <br>
+control player ship with WASD on the XY coordinates <br>
+set canvas limits for ship<br>
+<p></p>
+draw cross hairs<br>
+place cross hairs in the Z=0 location<br>
+have cross hairs follow mouse XY <br>
+have player ship rotate to point to the cross hairs<br>
+<p></p>
+clicking will shoot projectiles from ship <br>
+to the cross hair location towards the positive Z location<br>
+<p></p>
+draw enemies<br>
+they will fly towards the player in the negative Z direction<br>
+<p></p>
+add collision function<br>
+if projectile hits enemies, do damage<br>
+if enemies touch player, do damage<br>
+<p></p>
+use switch function when you grab a power up or armor<br>
+use switch function for enemy states if they can take more hits<br>
+use a switch function when you destroy enough enemies to get to the boss level <br>
+<p></p>
+have everything restart if you die<br>
+add score counter for each enemy you defeat<br>
+add a winning screen when you win
+
+*/
+<p></p>
+<h2>Art and the API</h2>
+
+<p></p>
+For the this reading this week, I thought it was pretty interesting how widely used and powerful API's are. I always knew data was really 
+valueable for companies but I never really thought of exactly what that data was. It was always a pretty abstract idea to me, but it makes
+a lot of sense that it would be oragnized in a way for it to be easily accessed and used by code. 
+<p></p>
+In a way API are kinda like classes in where you can take information out of them or how it's owners can put info in which makes it perfect
+to use with object oriented programming. I thought it was also really interesting how sharing an API is a risky move but at the same time
+could reap huge benifits like what Twitter. 
+<p></p>
+</center>
+
+								<a href="index.html"> <h2>home</h2> </a>
+
+								<p>
+									
+									<p>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								
+							</ul>
+						</nav>
+					</header>
+
+
+
+		<!-- Main -->
+					<div id="main">
+                    while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                     i++;
+                    }
+                    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</article>
+                    </div>
+                    
+		<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+                      </div>
+            
+
+        <!-- BG -->
+            <div id="bg"></div>
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
