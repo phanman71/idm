@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jon's IDM Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+        
+
+        
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<header id="header">
+						<div class="content">
+							<div class="content">
+							<div class="inner">
+								<h1>Creative Coding Week 6</h1>
+								<center>
+								<p></p>
+								For this week in creative coding, I learned about DOMs, audio, and worked on my mid term. 
+							
+								<p></p>
+								<a href="https://editor.p5js.org/phanman/sketches/3xNS8FDQr" target="_blank">check out the code here!</a>
+								<p></p>
+								I started off designing an interface for my midterm game where the player could input their name, select, a difficulty, and then press start.
+								I decided to go ahead and experiment with some music and see how much I could control it with some of the DOM items. 
+								I grabbed some cool video game music and set my future difficulty settings to select the music. Then I set the slider to 
+								control the amplidtude of the music. For some extra fun I also added a visualizer to react based on how loud a sound is. 
+								I think in the future I'd like a way to limit how many appear, since it is a little crazy right now. 
+								<p></p>
+
+								<iframe style="width: 1000px; height: 1000px; overflow: hidden;"  frameborder="0" src="https://editor.p5js.org/phanman/embed/3xNS8FDQr"> </iframe>
+								
+								<p></p>
+
+
+								<a href="https://editor.p5js.org/phanman/sketches/PnjDyf-Uz" target="_blank">check out the code here!</a>
+								<p></p>
+									For my mid term progress, I set up the main frame work for my 3D shooter game. It was pretty tricky to build my ship on the screen 
+									using just numbers and no real visualizer like most 3D programs, but I managed to get it going. Getting my ship to move in the correct 
+									wasn't too bad as well as drawing a crosshair. Where I really had to pull out all the stops was getting my ship to point at the crosshairs 
+									as I moved it with the mouse for a nice seamless rotation. I had to do so much research to finally find a formular to do such a thing. 
+									<p></p>
+									Using something called atan2 I was able to set the rotation of the Y by doing atan2 the aim x location  - ship x location, aim z location - ship z location.
+									Then for the X location it was atan2 aim z location - ship z location, aim y location - ship y location. It's been forever since I've done trig so 
+									luckily I found the equation online (link commented in the code). What really broke my brain though was getting the bullets that shot out of my ship to 
+									travel towards the crosshair. I thought it wasn't going to be too hard since I had already found the angles but I was mistaken. Luckily the professor 
+									pointed me and my ship in the right direction. Using vectors and lerps, you take the ship location vector where the bullet 
+									spawns and interpolate it with the vector of where it is heading (towards the crosshair). 
+									<p></p>
+									I think I'm pretty happy with where I am so far with this project. I think that I should be able to use the start menu I set up with this
+									and maybe even drive where the enemies spawn using music or at least have cool music as the player plays. Now that the hard part is done, 
+									I think adding enemies and a score system shouldn't be too hard. I still want to do other cool things like power ups and a boss level too!
+								<p></p>
+								<iframe style="width: 1000px; height: 1000px; overflow: hidden;"  frameborder="0" src="https://editor.p5js.org/phanman/embed/PnjDyf-Uz"> </iframe>
+							
+							
+
+
+								</center>
+
+								<a href="index.html"> <h2>home</h2> </a>
+
+								<p>
+									
+									<p>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								
+							</ul>
+						</nav>
+					</header>
+
+
+
+		<!-- Main -->
+					<div id="main">
+                    while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                     i++;
+                    }
+                    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</article>
+                    </div>
+                    
+		<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+                      </div>
+            
+
+        <!-- BG -->
+            <div id="bg"></div>
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
