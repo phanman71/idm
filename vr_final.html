@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jon's IDM Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+        
+
+        
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<header id="header">
+						<div class="content">
+							<div class="content">
+							<div class="inner">
+								<h1>Final Documentation </h1>
+								<p></p>
+								<center>
+									
+								<h2>The BiFrost</h2>
+I call this level selector the BiFrost since it lets us travel to each of the nine realms.
+								<span class="image main"><img src="images2/bifrost0.jpg" style="max-width: 1000px; max-height: 1000px;"alt="" /></span>  
+For the design I chose for selecting each level, I decided to go for kind of a classic level selector system where you just scroll thorugh each option and choose which thing you want. I went with this design since it makes it easier to manage only one level loaded at a time to keep performance up. I'm also not super amazing at programming so I wanted to make something not too complex. 
+								<span class="image main"><img src="images2/bifrost1.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+So when making this, you need to have player input so I have it enable and get the inputs from player 0 and 1, 0 is the default and I think everyone else gets labled as 1 when they enter the server. I also originally had it only appear when you got close enough but later on decided to just omit this feature. 
+								<span class="image main"><img src="images2/bifrost2.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+I set up two different inputs, on the keyboard its the comma and period button and on the controller its the top or bottom face button. essencially, one button will scroll the levels while the other one selects it if the selector is on top of it. this setup goes through each check to see if the selector is on top of the chosen spot and if its true, it loads the level as well as puts down the gate outward. 
+
+								<span class="image main"><img src="images2/bifrost3.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+This screen shows how I have the selector move through each selection, as the one button is pressed, the selector will move and turn the corrisponding map to be true and will load if pressing the other button. after you go through each option, the statuses of the booleans are reset to go over again. Using the selector also unloads all streamed in levels as well, just in case someone tries to load up multiple levels and blowing up the game. 
+								<span class="image main"><img src="images2/bifrost4.png" style="max-width: 1000px; max-height: 1000px;"alt="" /></span>
+								
+In the end, only Tinrey sent me a cover, but I was able to quickly take screenshots and photoshop some names on top for each map material. 
+<p></p>
+								<h2>Portals</h2>
+
+								The portal location changes based on the selection. 
+				<span class="image main"><img src="images2/portal1.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				So this image shows how the camera in each mirror paralaxes with the player's view making the doors feel a bit more real with some depth. 
+				<span class="image main"><img src="images2/portal2.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+				<span class="image main"><img src="images2/portal3.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				When a map is set to true based on the selector, it will move the mirror to a new location which I set as invisible cubes in the game. 
+				<span class="image main"><img src="images2/portal4.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				Here is a rough overview on the teleporter to show how it checks through each for loop to see if its true before moving the teleporter.
+				<span class="image main"><img src="images2/portal5.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				with this one, I show how touching the door will send you to the other door, there is a deleay and a boolean since you'll end up in an endless loop between portals without one. 
+				<span class="image main"><img src="images2/portal6.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				As you can see the doorway changes to a view of where you are going after the map is chosen. 
+				<span class="image main"><img src="images2/portal7.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				The partner door does the same, staring back at the original site.
+				<span class="image main"><img src="images2/portal8.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+				Just behind the scenes but when you are not using the door, it hangs out on the roof of the building. 
+				<p></p>
+								<h2>Levels</h2>
+There were a ton of levels to manage! Each one was like a new puzzle piece to make fit into my world where if it were optimization or making things accessible to the player. 
+								<span class="image main"><img src="images2/lvl0.png" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+I designed a little room to feel very dream like for the staging area before you get into the server. My idea was an infinite white space and walking through an empty door frame to send you else where, there are also invisible walls in most places as well so you don't fall off the map. I figured a fun way to do this was to lure people over to the donuts. 
+								<span class="image main"><img src="images2/lvl1.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+For the hub world I designed it with a Norse idea in mind and this temple kit was the best I could find but I was pretty happy with the results. To make it feel really large I felt as though I needed to add a second floor. Looking back at this I think this really works because in a large gathering, the main party hangs out in the large open space downstairs while people can hang out in smaller groups upstairs while not feeling completely cut off since they can still see eachother. 
+								<span class="image main"><img src="images2/lvl2.png" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+My personal world was a scifi inspired techy looking space. I wanted it to feel extra complex so I tried to really vary up the placement of items, these assets turned out to be extra heavy in terms of performance so I had to do some serious optimization passes or else risk crashing the headset whenver I loaded this level. 
+								<span class="image main"><img src="images2/lvl3.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+To add on to my scifi level, I added a space outside of it that is accessed if you go through a fake door. I wanted it to feel like you were breaking the game and breaking the simulation. if you decide to jump out off the level, you quickly find out that you are still in the game and trapped in the simulation within the simulation when you reappear in the temple. 
+								<span class="image main"><img src="images2/lvl4.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+For Laurens level, I had to do some serious optimization on some of her assets, I think she might have gotten assets from CAD websites or something since they were in the millions. I also walked her though how to make the door worked using unreal engine blueprints. I tried to help her make a key that you could pick up in VR with your hands but I think it was too big to grab, I ended up just kicking it to the door which was kind of like a mini game in itself. 
+								<span class="image main"><img src="images2/lvl5.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Fiona's world was actually probably the most efficient level in terms of space usage. The low poly design and simple materials really lent itself well to VR. She had a lot of issues with the collison but we were eventually able to figure it out later on. She had some coins sitting around that I decided to help make look better by making them spin in mid air like most traditional games. I also added a bridge to get the player back to the entrance. 
+								<span class="image main"><img src="images2/lvl6.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Jessica's level was also pretty heavy and would cause some crashes. I was able to go in and shrink down the poly count of some of her assets. I found it to be pretty interesting although very confusing to navigate with all the portals. I also had to tweak her code a little bit to make the teleporters work with the VR players. 
+								<span class="image main"><img src="images2/lvl7.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+For Alexis's level, it was pretty cool looking but was super choppy. I had to really crunch down some of her things like the transparent materials, I just made invisible. The particles definetly took a huge toll on the framerate, luckily there's not too much to navigate so I think the motion sickness was kept to a minimum.
+								<span class="image main"><img src="images2/lvl8.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Leigh's level was pretty interesting, at first it didn't take up too much space, but once I helped her get her dreams within the dream level streaming volumes in, it got pretty huge. Luckily I was able to find a space in the map to place the huge fantasy castle within the hosptial. 
+								<span class="image main"><img src="images2/lvl9.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+I wasn't able to budget enough time to figure out switching controls for Tinrey's flying shooting fariry game but he was cool with comprimising and placing a large TV screen and platform for the player to come into. I setup a blueprint and fixed the UVs so that when you come in, the TV automatically played which gave me issues at first. 
+								<span class="image main"><img src="images2/lvl10.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Lily's level was pretty cool but her textures were enormous. After shrinking down some huge textures that took up a bunch of space, I added some rainbow bridges from Fionas level so that you could travel to each of the floating Isles as time was tight and I didn't quite have the bandwidth to setup teleporters. 
+<p></p>
+								<h2>optimization</h2>
+Here are some visualizations to see how the space was allocated to each assets, as I kept adding more and more levels, I would start facing packaging issues with the Quest since there is a 2GB limit. The last image is what I was able to shring things down to. 
+								<span class="image main"><img src="images2/op1.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+								<span class="image main"><img src="images2/op2.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+								<span class="image main"><img src="images2/op3.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+								<h2>Overview</h2>
+
+								<span class="image main"><img src="images2/view0.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span>  
+I was able to get everyone to connect to my server which was good for sharing files. My teammates didn't quite get the files in early enough for us to work back and forth with updates so we kind of just ended up getting everyone to upload their files and not really update afterwards. 
+								<span class="image main"><img src="images2/view1.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+With each added level, you get a new sky sphere that is placed in the world that I would teleport you to. It was kind of cool to see behind the scene since it's almost like seeing it's own constilation. Each image shows the progression of the added worlds. 
+								<span class="image main"><img src="images2/view2.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+								<span class="image main"><img src="images2/view3.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+								<span class="image main"><img src="images2/view4.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Here's a little blueprint I setup which I called the safety net. If someone were to fall off the level for some reason or not go back to the hub world as a new level was being loaded in and the previous one unloaded, they would fall to their demise and have to reconnect. This is where my safety net comes in and spawns you back to safety in that scenerio. 
+<span class="image main"><img src="images2/view6.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+Turning on the server looks like this by the way, a bunch of console commands that show up after opening ports on my router and computer firewall so that people can join into the level. This whole project had quite the steep learning curve since I really was going into uncharted territory for myself and most other people I think. 
+
+								<span class="image main"><img src="images2/view5.JPG" style="max-width: 1000px; max-height: 1000px;"alt="" /></span> 
+
+			
+This is a little something I wanted to add in but didn't have the time for. I was going to hide a little item in each world and have the players bring them back to this other alter for some sort of secret easter egg surprise if all of them were collected. 
+<p></p>
+<h2>Thoughts</h2>
+
+I was glad I was given the oppertunity to expose my team members to Unreal Engine since it is becoming such a powerful tool in the industry as well as helping them understand source control a little bit. Setting up the server and networking was also a pretty cool skill for me to pick up in such a short time as well as understanding building out to mobile since the Quest uses an android system. I also got a new understanding and apprication for optimization and level design. Unreal Engine was actually built with multiplayer in mind because of Unreal Tournament so its cool to get myself exposed in that topic as well. Now that the framework has been built, I feel like I can really make more cool stuff in the future or build on top of this foundation. Just incase anyone were curious, I was in front of my computer for 36 hours before I could finally rest, think this was a new record for myself!
+
+							</center>
+
+
+								<a href="index.html"> <h2>home</h2> </a>
+
+								<p>
+									
+									<p>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								
+							</ul>
+						</nav>
+					</header>
+
+
+
+		<!-- Main -->
+					<div id="main">
+                    while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                     i++;
+                    }
+                    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</article>
+                    </div>
+                    
+		<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+                      </div>
+            
+
+        <!-- BG -->
+            <div id="bg"></div>
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
