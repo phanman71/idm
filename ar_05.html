@@ -23,14 +23,87 @@
 						<div class="content">
 							<div class="content">
 							<div class="inner">
-								<h1>AR Week 2</h1>
+								<h1>AR Final</h1>
 								<center>
 								<p></p>
-								text goes here
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/wxrb8bUckI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<p></p>
+								Here's a megathread with slides pulled from my final presentation of my Final AR project
 								
-								<span class="image main"><img src="images2/ar01.jpg" style="max-width: 1000px; max-height: 1000px;"alt="" /></span>  
+								<span class="image main"><img src="ar_final/ar01.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
 
+								So first thing I had to do was explain and propose my idea to my professor, I had a couple ideas but just sticking to what I was good at which was 3D art won out in the end. Most of my classmates went and made really meaninful and artsy projects but I decided to just make something really awesome looking. I drew out a really rough story board and decided to make a cool monster robot fight. I've always been pretty into creature design and mechas too. AR is pretty tricky to leverage, most things are better to just watch normally as a video but to make it worth it, epic scale is the name of the game here. 
+								<span class="image main"><img src="ar_final/ar02.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
 
+								The first thing I always do before I start designing or creating something is to gather some reference images. For my moodboard, I looked mostly at Kaiju since that's what I'm making, Godzilla because he's like the most famous one, some prehistoric ocean dinosars and sharks since my creature is coming out of the ocean and bears because I wanted a beefy creature that could stand with realistic proportions. It seems common to see giant creatures that couldn't actually support their own weight in real life. 
+								<span class="image main"><img src="ar_final/ar03.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								The first pass I made, I kept it pretty rough and it was okay, I felt like I leaned a little too much in the shark direction and not enough bear. 
+								<span class="image main"><img src="ar_final/ar04.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span> 
+								
+								Keeping the fins, teeth and tail, I bearified the face a bit and moved onto the robot for a bit. 
+								<span class="image main"><img src="ar_final/ar05.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								The images I grabbed for the mecha included a bunch of gundams, jagers from pacific rim, and some other stylish anime like mechas. I was kinda just looking for some really cool designs for this guy. 
+								<span class="image main"><img src="ar_final/ar06.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+								
+								For the blockout phase, I did it in zbrush to keep things loose and quick. I tried to give it a really cool looking agile and heroic gesture and cool proportions. 
+								<span class="image main"><img src="ar_final/ar07.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								At this point I decided that I really should work out the technical hurdles before I kept going. Turns out building for mobile is a really huge pain in the butt for UE4, luckily through some persistence, I was able to figure things out and get things working and packaging without errors. I learned that with Android, versions matter a lot and you really can't just always grab the latest things. 
+								<span class="image main"><img src="ar_final/ar08.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								Using the built in template for AR in UE4, it would detect surfaces and by tapping, I could place things that were in the blueprint. This system had some issues with materials and lighting but I was just glad to have things working. For these tests, I used a low poly gundam I made a while back for fun. 
+								<span class="image main"><img src="ar_final/ar09.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								For the second test, I tried the template that Android made for UE4, I decided to use this one for my project since it seemed more accurate and could also do walls which was cool. 
+								<span class="image main"><img src="ar_final/ar10.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								For my next test, I wanted to make sure skeletal animations worked. I went on Miximo and grabbed some similar looking models with some animations and popped them in, luckily everything worked out pretty nicely!
+								<span class="image main"><img src="ar_final/ar11.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								Now that the tehcnical hurdles were solved, I went back to the art and decided to start sculpting in some of the details for my Kaiju. It's been a while since I got to do some Zbrushing so it was pretty enjoyable. 
+								<span class="image main"><img src="ar_final/ar12.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								I was pretty pressed for time since I do work full time and have two other classes, so instead of going into mari or substance painter, I just did some painting in polypain sticking in zbrush. The cavity mask is pretty useful and painting with the color sprays are pretty quick. 
+								<span class="image main"><img src="ar_final/ar13.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								To keep speeding things up, I used zremesher and uv master in zbrush to save myself a couple of hours worth of work.  
+								<span class="image main"><img src="ar_final/ar14.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+								Using Mixamo was to autorig my character was also a huge time saver, but since my creature isn't quite a standard biped, I did have to do a bunch of skin weight fixing. 
+
+								<span class="image main"><img src="ar_final/ar15.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								For the animation, I went ahead and took a visit to the mocap lab and used motive and optitrack to capture some animation. For this, I decided to just use the ue4 mannequin since my mecha should be about the same. To record the animation, I used the new take recorder to save out animations directly into ue4 that I could export out as fbx files if I needed to. 
+								<span class="image main"><img src="ar_final/ar16.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								After a bunch of takes and decided on one, I had a bunch of animation to clean up which I did in Maya. 
+								<span class="image main"><img src="ar_final/ar17.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								Even though I had to still rush through this project, I still went ahead and quickly did some re-surfacing the zbrush blockout to get some hard edges before quickly auto UVing it. 
+								<span class="image main"><img src="ar_final/ar18.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								I've had some pretty great results doing my texture map baking in marmoset toolbag, its so quick and comes out pretty clean and easy to debug. 
+								<span class="image main"><img src="ar_final/ar19.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>
+
+								Doing the same with the mecha, I then put it into substance painter and threw on some quick procedural materials that I edited. 
+								<span class="image main"><img src="ar_final/ar20.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								I grabbed some free sound effects online and timed it using adobe premiere before exporting it out and then imported into ue4, which likes wav files for some reason. 
+								<span class="image main"><img src="ar_final/ar21.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+								One thing I had to figure out was a way to hide the bottom quarter of the characters bodies since they are supposed to look like they are fighting in the ocean. 
+						
+								<span class="image main"><img src="ar_final/ar22.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								I built everything using a blueprint sequencer, adding rockets, explosions, spashes, lazer beams, helicopters and more 
+								<span class="image main"><img src="ar_final/ar23.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+
+								Before driving an hour out to get to the beach I of course tested it out a few times. Luckily I had this table top in my car that I could do planar tracking on since it was like impossible to do on the sand. I think I forgot it in there when I was moving things around. 
+								<span class="image main"><img src="ar_final/ar24.JPG" style="max-width: 2000px; max-height: 2000px;"alt="" /></span>  
+								
+								Even though it's not perfect, I'm still pretty proud of how much I got working in such a tight timeline. I learned a lot about how tricky it can be packaging for moblile devices as well as the hardships of AR. Hope you guys liked it! 
+								
 								</center>
 
 								<a href="index.html"> <h2>home</h2> </a>
